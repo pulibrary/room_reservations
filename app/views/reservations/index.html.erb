@@ -1,0 +1,50 @@
+<h1>Listing reservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rdate</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Duration</th>
+      <th>Name</th>
+      <th>Note</th>
+      <th>Expected attendance</th>
+      <th>Tentative</th>
+      <th>Recurring</th>
+      <th>Approved</th>
+      <th>Person</th>
+      <th>Room</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.rdate %></td>
+        <td><%= reservation.start_time %></td>
+        <td><%= reservation.end_time %></td>
+        <td><%= reservation.duration %></td>
+        <td><%= reservation.name %></td>
+        <td><%= reservation.note %></td>
+        <td><%= reservation.expected_attendance %></td>
+        <td><%= reservation.tentative %></td>
+        <td><%= reservation.recurring %></td>
+        <td><%= reservation.approved %></td>
+        <td><%= reservation.person %></td>
+        <td><%= reservation.room %></td>
+        <td><%= link_to 'Show', reservation %></td>
+        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reservation', new_reservation_path %>
+
+<br>
+<div id='calendar'></div>

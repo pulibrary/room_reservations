@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rdate:</strong>
+  <%= @reservation.rdate %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @reservation.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @reservation.end_time %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @reservation.duration %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reservation.name %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @reservation.note %>
+</p>
+
+<p>
+  <strong>Expected attendance:</strong>
+  <%= @reservation.expected_attendance %>
+</p>
+
+<p>
+  <strong>Tentative:</strong>
+  <%= @reservation.tentative %>
+</p>
+
+<p>
+  <strong>Recurring:</strong>
+  <%= @reservation.recurring %>
+</p>
+
+<p>
+  <strong>Approved:</strong>
+  <%= @reservation.approved %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @reservation.person %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @reservation.room %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>
